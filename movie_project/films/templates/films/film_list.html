@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <title>Список фильмов</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Список фильмов</h1>
+            <ul class="list-group">
+                {% for film in films %}
+                    <li class="list-group-item">
+                        <h2>{{ film.title }}</h2>
+                        <p>{{ film.description }}</p>
+                        <p><strong>Отзыв:</strong> {{ film.review }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+    </html>
